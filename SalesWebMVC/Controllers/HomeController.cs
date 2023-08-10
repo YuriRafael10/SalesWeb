@@ -18,6 +18,12 @@ namespace SalesWebMVC.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Aplicação de vendas MVC criada utilizando C#";
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
