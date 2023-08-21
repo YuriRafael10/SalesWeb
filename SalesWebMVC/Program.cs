@@ -20,7 +20,13 @@ namespace SalesWebMVC
             builder.Services.AddControllersWithViews();
 
             var connectionStringMysql = builder.Configuration.GetConnectionString("SalesWebMVCContext");
-            builder.Services.AddDbContext<SalesWebMVCContext>(options => options.UseMySql(connectionStringMysql, ServerVersion.Parse("8.0.25-mysql")));
+            builder.Services.AddDbContext<SalesWebMVCContext>(options => options.UseMySql(connectionStringMysql, ServerVersion.Parse("8.0.25-mysql"),
+                mysqlOptions =>
+                {
+                    mysqlOptions.EnableRetryOnFailure(); // Caso tenha falha, sera feito tentativas adicionais para conectar ao bd
+                }
+                )
+            );
 
             builder.Services.AddScoped<SeedingService>();
             builder.Services.AddScoped<SellerService>();
