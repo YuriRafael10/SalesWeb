@@ -6,20 +6,26 @@
 
 <h1>@ViewData["Title"]</h1>
 
+<p>
+    <a asp-action="Create" class="btn btn-outline-primary btn-sm">
+         Cadastrar novo
+    </a>
+</p>
+
 <table class="table table-striped table-hover">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Nome
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BirthDate) 
+                Nascimento
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.BaseSalary)
+                Salário
             </th>
             <th>
 

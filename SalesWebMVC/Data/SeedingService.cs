@@ -19,14 +19,14 @@ namespace SalesWebMVC.Data
             Department d4 = new Department(4, "Alimentos");
             Department d5 = new Department(5, "Móveis");
 
-            Seller s1 = new Seller(1, "João", "joao@example.com", new DateOnly(1990, 1, 15), 2000.0, d1);
-            Seller s2 = new Seller(2, "Maria", "maria@example.com", new DateOnly(1985, 5, 3), 2500.0, d2);
-            Seller s3 = new Seller(3, "Pedro", "pedro@example.com", new DateOnly(1992, 9, 20), 1800.0, d1);
-            Seller s4 = new Seller(4, "Ana", "ana@example.com", new DateOnly(1995, 3, 10), 2100.0, d3);
-            Seller s5 = new Seller(5, "Luís", "luis@example.com", new DateOnly(1988, 7, 8), 2200.0, d2);
-            Seller s6 = new Seller(6, "Carla", "carla@example.com", new DateOnly(1993, 11, 25), 1900.0, d1);
-            Seller s7 = new Seller(7, "Rafael", "rafael@example.com", new DateOnly(1986, 6, 17), 2400.0, d4);
-            Seller s8 = new Seller(8, "Julia", "julia@example.com", new DateOnly(1991, 8, 30), 2300.0, d5);
+            Seller s1 = new Seller(1, "João", "joao@example.com", new DateTime(1990, 1, 15), 2000.0, d1);
+            Seller s2 = new Seller(2, "Maria", "maria@example.com", new DateTime(1985, 5, 3), 2500.0, d2);
+            Seller s3 = new Seller(3, "Pedro", "pedro@example.com", new DateTime(1992, 9, 20), 1800.0, d1);
+            Seller s4 = new Seller(4, "Ana", "ana@example.com", new DateTime(1995, 3, 10), 2100.0, d3);
+            Seller s5 = new Seller(5, "Luís", "luis@example.com", new DateTime(1988, 7, 8), 2200.0, d2);
+            Seller s6 = new Seller(6, "Carla", "carla@example.com", new DateTime(1993, 11, 25), 1900.0, d1);
+            Seller s7 = new Seller(7, "Rafael", "rafael@example.com", new DateTime(1986, 6, 17), 2400.0, d4);
+            Seller s8 = new Seller(8, "Julia", "julia@example.com", new DateTime(1991, 8, 30), 2300.0, d5);
 
             SalesRecord sr1 = new SalesRecord(1, new DateTime(2023, 8, 10), 1500.0, SaleStatus.Faturado, s1);
             SalesRecord sr2 = new SalesRecord(2, new DateTime(2023, 3, 12), 800.0, SaleStatus.Pendente, s2);
