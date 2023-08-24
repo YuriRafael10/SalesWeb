@@ -1,0 +1,44 @@
+﻿@model SalesWebMVC.Models.Seller
+@{
+    ViewData["Title"] = "Delete";
+    var brazilianCulture = new System.Globalization.CultureInfo("pt-BR");
+}
+
+<h1>Deletar</h1>
+<div>
+    <h4>Vendedor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model=>model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model=>model.Email)
+        </dd>
+        <dt>
+            Data de Nascimento
+        </dt>
+        <dd>
+            @Model.BirthDate.ToString("dd/MM/yyyy") (@(DateTime.Now.Year - Model.BirthDate.Year) anos)
+        </dd>
+        <dt>
+            Salário
+        </dt>
+        <dd>
+            @Model.BaseSalary.ToString("C", brazilianCulture)
+        </dd>
+    </dl>
+    <br />
+    <h3>Você tem certeza que deseja deletar esse vendedor?</h3>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <a asp-action="Index" class="btn btn-primary">Voltar</a>
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+    </form>
+</div>
