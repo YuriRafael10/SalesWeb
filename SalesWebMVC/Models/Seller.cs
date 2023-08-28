@@ -20,7 +20,7 @@ namespace SalesWebMVC.Models
         [Display(Name = "Salário")]
         [Required(ErrorMessage = "Salário obrigatório")]
         public double BaseSalary { get; set; }
-        public Department Department { get; set; }
+        public Department? Department { get; set; }
         public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
