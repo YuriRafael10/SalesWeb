@@ -5,13 +5,20 @@ namespace SalesWebMVC.Models
     public class Seller
     {
         public int Id { get; set; }
+
         [Display(Name = "Nome")]
+        [Required(ErrorMessage = "Nome obrigatório")]
+        [StringLength(60, MinimumLength = 3, ErrorMessage = "Nome inválido!")]
         public string Name { get; set; }
+        [Required(ErrorMessage = "{0} obrigatório")]
+        [EmailAddress(ErrorMessage = "Insira um email válido")]
         public string Email { get; set; }
         [Display(Name = "Nascimento")]
         [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Data de nascimento obrigatório")]
         public DateTime BirthDate { get; set; }
         [Display(Name = "Salário")]
+        [Required(ErrorMessage = "Salário obrigatório")]
         public double BaseSalary { get; set; }
         public Department Department { get; set; }
         public int DepartmentId { get; set; }
