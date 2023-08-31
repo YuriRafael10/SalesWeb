@@ -1,5 +1,7 @@
 ﻿using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Permissions;
+using System.Xml.Linq;
 
 namespace SalesWebMVC.Models
 {
@@ -8,7 +10,6 @@ namespace SalesWebMVC.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
-
         public Department() { }
         public Department(int id, string name)
         {

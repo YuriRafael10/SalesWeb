@@ -1,13 +1,17 @@
 ﻿using SalesWebMVC.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace SalesWebMVC.Models
 {
     public class SalesRecord
     {
         public int Id { get; set; }
+        [Display(Name = "Data")]
         public DateTime Date { get; set; }
+        [Display(Name = "Valor")]
         public double Amount { get; set; }
         public SaleStatus Status { get; set; }
+        [Display(Name = "Vendedor")]
         public Seller Seller { get; set; }
         public SalesRecord() { }
         public SalesRecord(int id, DateTime date, double amount, SaleStatus status, Seller seller)
