@@ -1,5 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    ViewData["Title"] = "Sobre";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<style>
+    .github-link {
+        display: inline-block;
+        padding: 10px;
+        text-decoration: none;
+        transition: border-color 0.3s;
+    }
+
+    .github-logo {
+        vertical-align: middle;
+        max-width: 30%;
+        height: auto;
+        outline: 1px solid #000;
+        transition: transform 0.3s, outline-color 0.3s;
+    }
+
+    .github-link:hover .github-logo {
+        transform: scale(1.05);
+    }
+</style>
+<body>
+    <h2>@ViewData["Title"]</h2>
+    <p>Aplicação Web com ASP .NET Core MVC e Entity Framework</p>
+    
+    <a href="https://github.com/YuriRafael10" class="github-link" target="_blank">
+        <img src="https://logosmarcas.net/wp-content/uploads/2020/12/GitHub-Logo.png" alt="GitHub" class="github-logo">
+    </a>
+</body>
+</html>
